@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibir Professor</title>
+</head>
+<body>
+<h1>Exibir Professor</h1>
+Nome: {{professor_data[0]}}<br>
+Data de nascimento:{{professor_data[1]}}<br>
+Nome da mãe:{{professor_data[2]}}<br>
+Titulação:{{professor_data[3]}}<br>
+
+<h2>Disciplinas</h2>
+<ul>
+{%for disciplina in disciplines%}
+<li>{{disciplina[0]}}</li>
+{%endfor%}
+</ul>
+
+<a href="/calcularSalarioProfessor?pk_professor={{professor_data[4]}}&nome={{professor_data[0]}}">Dados Financeiros (Questão 5)</a>
+
+</body>
+</html>

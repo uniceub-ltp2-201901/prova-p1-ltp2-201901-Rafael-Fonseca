@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Por Titulacao</title>
+</head>
+<body>
+{%if titulacao == None%}
+<form action="/ConsultarPorTitulacao" method="get">
+    <input type="radio" name="titulacao" value="1">Especialização<br>
+    <input type="radio" name="titulacao" value="2">Mestrado<br>
+    <input type="radio" name="titulacao" value="3">Doutorado<br>
+    <input type="submit" value="Send">
+</form>
+{%else%}
+    <ul>
+    {%for professor in result%}
+        <li>{{professor[0]}}</li>
+        {%endfor%}
+    </ul>
+{%endif%}
+</body>
+</html>

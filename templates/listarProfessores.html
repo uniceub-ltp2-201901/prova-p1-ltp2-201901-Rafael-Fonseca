@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Professores</title>
+</head>
+<body>
+
+<h1>Lista de professores</h1>
+
+<ul>
+{%for professor in professorsList%}
+    <a href="/exibirProfessor?professor={{professor[1]}}"><li>{{professor[0]}}</li></a>
+    {%endfor%}
+</ul>
+</body>
+</html>
